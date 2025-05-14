@@ -18,7 +18,13 @@ function TaskList() {
   return (
     <div>
       <h2>All Tasks</h2>
-      <p>Tasks will be listed here.</p>
+      <ul>
+        {tasks.map((task) => (
+          <li key={task.id}>
+            {task.title} ({task.category}) — {task.completed ? '✅' : '❌'}
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

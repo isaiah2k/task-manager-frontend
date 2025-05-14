@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import NavBar from './NavBar'
-import TaskList from './TaskList'
-import NewTaskForm from './NewTaskForm'
-import About from './About'
+import NavBar from './NavBar.js'
+import TaskList from './TaskList.js'
+import NewTaskForm from './NewTaskForm.js'
+import About from './About.js'
 
 function App() {
   return (

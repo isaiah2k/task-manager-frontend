@@ -15,6 +15,8 @@ function NewTaskForm() {
   }
 
   console.log('Submitting new task:', newTask)
+
+  console.log('Submitting new task:', newTask)
   fetch('http://localhost:6001/tasks', {
     method: 'POST',
     headers: {
@@ -36,12 +38,20 @@ function NewTaskForm() {
 
       <label>
         Title:
-        <input/>
+        <input
+          type='text'
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          required
+        />
       </label>
 
       <label>
         Category:
-        <select>
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          >
           <option>School</option>
           <option>Health</option>
           <option>Chores</option>

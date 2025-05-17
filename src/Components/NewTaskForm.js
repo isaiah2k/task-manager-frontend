@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function NewTaskForm() {
+function NewTaskForm({onAddTask, currentTasks}) {
 
   const [title, setTitle] = useState('')
   const [category, setCategory] = useState('School')
@@ -26,6 +26,7 @@ function NewTaskForm() {
     .then((res) => res.json())
     .then((data) => {
       console.log('Task added:', data)
+      onAddTask([...currentTasks, data])
       setTitle('')
       setCategory('School')
     })

@@ -1,9 +1,26 @@
 function NewTaskForm() {
   return (
-    <div>
-      <h2>New Task Form</h2>
-      <p>Form will go here.</p>
-    </div>
+    <form>
+      <h2>Add a New Task</h2>
+
+      <label>
+        Title:
+        <input/>
+      </label>
+
+      <label>
+        Category:
+        <select>
+          <option>School</option>
+          <option>Health</option>
+          <option>Chores</option>
+          <option>Mental</option>
+          <option>Errands</option>
+        </select>
+      </label>
+
+      <button>Add Task</button>
+    </form>
   )
 }
 

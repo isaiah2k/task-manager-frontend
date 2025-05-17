@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react'
-
-function TaskList() {
+function TaskList({ tasks }) {
 
   return (
     <div>

@@ -1,6 +1,37 @@
+import { useState } from 'react'
+
 function NewTaskForm() {
+
+  const [title, setTitle] = useState('')
+  const [category, setCategory] = useState('School')
+
+  function handleSubmit(e) {
+  e.preventDefault()
+
+  const newTask = {
+    title,
+    category,
+    completed: false
+  }
+
+  console.log('Submitting new task:', newTask)
+  fetch('http://localhost:6001/tasks', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newTask)
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log('Task added:', data)
+      setTitle('')
+      setCategory('School')
+    })
+}
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h2>Add a New Task</h2>
 
       <label>
@@ -19,7 +50,7 @@ function NewTaskForm() {
         </select>
       </label>
 
-      <button>Add Task</button>
+      <button type='submit'>Add Task</button>
     </form>
   )
 }

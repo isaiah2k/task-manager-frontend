@@ -13,10 +13,9 @@ function NewTaskForm() {
     category,
     completed: false
   }
-
+  
   console.log('Submitting new task:', newTask)
-
-  console.log('Submitting new task:', newTask)
+  
   fetch('http://localhost:6001/tasks', {
     method: 'POST',
     headers: {

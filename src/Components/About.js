@@ -7,7 +7,7 @@ function About() {
         Designed on Windows WSL & VS Code — 5/2025
       </p>
       <p>
-        Created by <a href="https://github.com/isaiah2k">github: isaiah2k</a>
+        Github: <a href="https://github.com/isaiah2k"> isaiah2k</a>
       </p>
     </div>
   )

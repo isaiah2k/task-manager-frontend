@@ -35,14 +35,13 @@ function TaskList({ tasks, setTasks }) {
       <ul>
         {tasks.map((task) => (
           <li key={task.id}>
-            {task.title} ({task.category})
-
-            {task.completed
-              ? <span>✅</span>
-              : <button onClick={() => handleComplete(task.id)}>Complete</button>
-            }
-
-            <button onClick={() => handleDelete(task.id)}>Delete</button>
+            {task.title} ({task.category}) — {task.completed ? '✅' : '❌'}
+            <div>
+              {!task.completed && (
+                <button onClick={() => handleComplete(task.id)}>Complete</button>
+              )}
+              <button onClick={() => handleDelete(task.id)}>Delete</button>
+            </div>
           </li>
         ))}
       </ul>

@@ -4,6 +4,7 @@ import NavBar from './NavBar.js'
 import TaskList from './TaskList.js'
 import NewTaskForm from './NewTaskForm.js'
 import About from './About.js'
+import '../App.css'
 
 function App() {
 
@@ -23,12 +24,14 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<TaskList tasks={tasks} setTasks={setTasks}/>} />
-        <Route path="/new" element={<NewTaskForm onAddTask={setTasks} currentTasks={tasks} />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <div className="App">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<TaskList tasks={tasks} setTasks={setTasks}/>} />
+          <Route path="/new" element={<NewTaskForm onAddTask={setTasks} currentTasks={tasks} />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   )
 }

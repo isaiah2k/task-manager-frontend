@@ -25,7 +25,7 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="/" element={<TaskList tasks={tasks}/>} />
+        <Route path="/" element={<TaskList tasks={tasks} setTasks={setTasks}/>} />
         <Route path="/new" element={<NewTaskForm onAddTask={setTasks} currentTasks={tasks} />} />
         <Route path="/about" element={<About />} />
       </Routes>

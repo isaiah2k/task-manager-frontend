@@ -56,7 +56,7 @@ npm install -g json-server
 json-server --watch db.json --port 6001
 ```
 
-> Your tasks will be saved to and fetched from `http://localhost:6001/tasks`.
+Your tasks will be saved to and fetched from `http://localhost:6001/tasks`.
 
 ### Step 3: Start the React Frontend
 

@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+# Task Manager Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my Task Manager app — a simple web app built with React that helps organize your daily responsibilities. I built this app to keep track of everyday tasks like schoolwork, health goals, errands, or mental resets — all in one place. It’s meant to be lightweight, easy to use, and clean-looking.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Add Tasks: Submit new tasks using a form (with title and category).
+- Mark Complete: Press a button to mark a task as done ✅.
+- Delete Task: Remove tasks once you're finished or no longer need them.
+- Organized Layout: Tasks are aligned clearly, with buttons vertically stacked.
 
-### `npm start`
+## Screenshot
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Task Manager Screenshot](./src/Screenshot.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Task Management
 
-### `npm test`
+1. **Add a Task**: Go to "New Task", fill out the form with the task title and choose a category (like Health, School, Chores, etc.).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Mark as Complete**: Once a task is done, click “Complete” and it’ll turn into a ✅ symbol.
 
-### `npm run build`
+3. **Delete a Task**: Click the Delete button to remove any task from your list.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup and Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Step 1: Clone the Repositories
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This app uses two repos — one for the frontend and one for the backend (json-server).
 
-### `npm run eject`
+**Frontend**
+```bash
+git clone git@github.com:YOUR_USERNAME/task-manager-frontend.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Backend**
+```bash
+git clone git@github.com:YOUR_USERNAME/task-manager-backend.git
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Replace `YOUR_USERNAME` with your GitHub username or the repo owner.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Step 2: Install and Start json-server
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**1.** Navigate into the backend folder:
+```bash
+cd task-manager-backend
+```
 
-## Learn More
+**2.** Make sure you have `json-server` installed:
+```bash
+npm install -g json-server
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**3.** Run the server:
+```bash
+json-server --watch db.json --port 6001
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> Your tasks will be saved to and fetched from `http://localhost:6001/tasks`.
 
-### Code Splitting
+### Step 3: Start the React Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**1.** Open a new terminal and go into the frontend folder:
+```bash
+cd task-manager-frontend
+```
 
-### Analyzing the Bundle Size
+**2.** Install dependencies:
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**3.** Start the React dev server:
+```bash
+npm start
+```
 
-### Making a Progressive Web App
+### Step 4: Use the App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Once both servers are running:
+- Go to `http://localhost:3000`
+- Start adding, completing, and deleting tasks!
 
-### Advanced Configuration
+## Tools & Tech Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **React**: Frontend component-based framework
+- **JavaScript**: Logic and interaction
+- **CSS**: Simple styling and layout
+- **json-server**: Local backend for persisting tasks
 
-### Deployment
+## File Structure Overview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```plaintext
+task-manager-frontend/
+├── src/
+│   ├── App.js
+│   ├── NavBar.js
+│   ├── TaskList.js
+│   ├── NewTaskForm.js
+│   └── About.js
 
-### `npm run build` fails to minify
+task-manager-backend/
+├── db.json
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Devices
+
+This app was built on **Linux (WSL)** using **VS Code**. It runs in modern desktop browsers. No mobile styling is included.
+
+## License
+
+```MIT License
+Copyright (c) 2025 Isaiah Mitchell
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software... (yes, you’ve seen this part before)
+
+Don't steal this or I'll be mad.  
+And I’ll know.  
+(ง •̀ᗝ•́)ง
+```
